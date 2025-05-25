@@ -1,0 +1,119 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(180deg, #0e0c0b, #ffffff, #000000);
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-top: 50px;
+  height: 100vh;
+}
+
+.container {
+  width: 340px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 80px;
+  margin-bottom: 10px;
+  background: linear-gradient(180deg, #0e0c0b, #ffffff, #000000);
+  color: rgb(0, 0, 0);
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.score, .best {
+  background: linear-gradient(180deg, #0e0c0b, #ffffff, #000000);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+}
+
+#new-game {
+  background: linear-gradient(180deg, #0e0c0b, #ffffff, #000000);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.grid-container {
+  width: 320px;
+  height: 320px;
+  background: linear-gradient(180deg, #0e0c0b, #ffffff, #000000);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.tile {
+  width: 70px;
+  height: 70px;
+  background: #0e0c0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.tile-2    { background: #eee4da; color: #000000; }
+.tile-4    { background: #ede0c8; color: #000000; }
+.tile-8    { background: #f2b179; color: white; }
+.tile-16   { background: #f59563; color: white; }
+.tile-32   { background: #f67c5f; color: white; }
+.tile-64   { background: #f65e3b; color: white; }
+.tile-128  { background: #edcf72; color: white; }
+.tile-256  { background: #edcc61; color: white; }
+.tile-512  { background: #edc850; color: white; }
+.tile-1024 { background: #edc53f; color: white; }
+.tile-2048 { background: #edc22e; color: white; }
+
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls button {
+  background: linear-gradient(180deg, #0e0c0b, #ffffff, #000000);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 25px;
+  margin: 5px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 95%;
+  }
+
+  .grid-container {
+    width: 95vw;
+    height: 95vw;
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .tile {
+    font-size: 20px;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .controls button {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+}
